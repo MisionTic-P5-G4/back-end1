@@ -39,18 +39,19 @@ public class ProductController {
         if (mio == null)
             throw  new ProductNotFoundException("No se encontro el producto con id: " + id);
 
-        product.setId(id);
+        product.setId(Integer.parseInt(id));
         return productsRepository.save(product);
     }
 
     @DeleteMapping("product/{id}")
-    void deleteProduct(@PathVariable String id){
+    String deleteProduct(@PathVariable String id){
         Product mio = productsRepository.findById(id)
                         .orElse(null);
         if (mio == null)
             throw  new ProductNotFoundException("No se encontro el producto con id: " + id);
 
         productsRepository.deleteById(id);
+        return "producto eliminado";
     }
 
 }

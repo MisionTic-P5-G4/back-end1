@@ -4,13 +4,13 @@ import org.springframework.data.annotation.Id;
 
 public class Product {
     @Id
-    private String id;
+    private Integer id;
     private String name;
     private Integer price;
     private String description;
     private String city;
 
-    public Product(String id, String name, Integer price, String description, String city) {
+    public Product(Integer id, String name, Integer price, String description, String city) {
         this.id = id;
         this.name = name;
         this.price = price;
@@ -18,11 +18,11 @@ public class Product {
         this.city = city;
     }
 
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
