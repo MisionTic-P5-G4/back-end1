@@ -6,11 +6,11 @@ import org.springframework.web.bind.annotation.*;
 @ControllerAdvice
 @ResponseBody
 
-public class ProductNotFoundAdvice {
+public class ProductIdAlreadyUsedAdvice {
     @ResponseBody
-    @ExceptionHandler (ProductNotFoundException.class)
-    @ResponseStatus (HttpStatus.NOT_FOUND)
-    String EntityNotFoundAdvice (ProductNotFoundException ex){
+    @ExceptionHandler (ProductIdAlreadyUsedException.class)
+    @ResponseStatus (HttpStatus.CONFLICT)
+    String EntityNotFoundAdvice (ProductIdAlreadyUsedException ex){
         return ex.getMessage();
     }
 }
