@@ -1,8 +1,12 @@
 package com.guarderia.products_ms.models;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.Transient;
 
 public class Product {
+    @Transient
+    public static final String SEQUENCE_NAME2 = "Counter2";
+
     @Id
     private Integer id;
     private String name;
