@@ -7,7 +7,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
-public class Operation {
+public class UserProduct {
     @Transient
     public static final String SEQUENCE_NAME = "Counter";
 
@@ -18,7 +18,7 @@ public class Operation {
     private Integer quantity;
     private Date dateModified;
 
-    public Operation(Integer id, Integer userId, Integer productId, Integer quantity, Date dateModified) {
+    public UserProduct(Integer id, Integer userId, Integer productId, Integer quantity, Date dateModified) {
         this.id = id;
         this.userId = userId;
         this.productId = productId;
