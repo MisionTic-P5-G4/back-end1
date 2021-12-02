@@ -6,7 +6,7 @@
 
 #### Resumen
 | Servicio | funcionalidad| funcionalidad | funcionalidad | funcionalidad |
-| --------- | --------- | --------- | --------- | --------- |
+| ----------- | ----------- | ----------- | ----------- | ----------- |
 | CRUD Products| Create| Get <br/> getAll <br/> getByIsService| Update| Delete|
 | CRUD userProducts| Create| GetbyUserId <br/> getbyUser&Product| Update| DeletebyUserId <br/> DeleteByProductId <br/> Delete byUser&Product|
 
