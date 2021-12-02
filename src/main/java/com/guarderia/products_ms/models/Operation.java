@@ -7,7 +7,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
-public class Box {
+public class Operation {
     @Transient
     public static final String SEQUENCE_NAME = "Counter";
 
@@ -18,7 +18,7 @@ public class Box {
     private Integer quantity;
     private Date dateModified;
 
-    public Box(Integer id, Integer userId, Integer productId, Integer quantity, Date dateModified) {
+    public Operation(Integer id, Integer userId, Integer productId, Integer quantity, Date dateModified) {
         this.id = id;
         this.userId = userId;
         this.productId = productId;
