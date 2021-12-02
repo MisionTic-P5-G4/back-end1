@@ -11,15 +11,13 @@ public class Product {
     private Integer id;
     private String name;
     private Integer price;
-    private String description;
-    private String city;
+    private Boolean isService;
 
-    public Product(Integer id, String name, Integer price, String description, String city) {
+    public Product(Integer id, String name, Integer price, Boolean isService ){
         this.id = id;
         this.name = name;
         this.price = price;
-        this.description = description;
-        this.city = city;
+        this.isService = isService;
     }
 
     public Integer getId() {
@@ -46,19 +44,11 @@ public class Product {
         this.price = price;
     }
 
-    public String getDescription() {
-        return description;
+    public Boolean getIsService() {
+        return isService;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
+    public void setIsService(Boolean isService) {
+        this.isService = isService;
     }
 }

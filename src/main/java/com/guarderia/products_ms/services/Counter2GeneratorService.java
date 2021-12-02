@@ -1,6 +1,6 @@
 package com.guarderia.products_ms.services;
 
-import com.guarderia.products_ms.models.Counter2;
+import com.guarderia.products_ms.config.Counter2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoOperations;
 import org.springframework.data.mongodb.core.query.Criteria;

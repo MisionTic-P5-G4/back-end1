@@ -1,15 +1,15 @@
-package com.guarderia.products_ms.models;
+package com.guarderia.products_ms.config;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "Counter2")
-public class Counter2 {
+@Document(collection = "Counter")
+public class Counter {
     @Id
     private  String id;
     private Integer seq;
 
-    public Counter2() {
+    public Counter() {
 
     }
 

@@ -7,6 +7,7 @@ import com.guarderia.products_ms.models.Product;
 import com.guarderia.products_ms.repositories.ProductsRepository;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -28,6 +29,11 @@ public class ProductController {
     @GetMapping("/products/")
     List<Product> getAllProducts(){
         return productsRepository.findAll();
+    }
+
+    @GetMapping("/products/{state}")
+    List<Product> getProductIsService(@PathVariable Boolean state) {
+        return productsRepository.findByIsService(state);
     }
 
     @PostMapping("/product")
