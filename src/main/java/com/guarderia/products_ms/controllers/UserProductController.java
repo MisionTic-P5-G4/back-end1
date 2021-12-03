@@ -84,8 +84,8 @@ public class UserProductController {
         return mine;
     }
 
-    @DeleteMapping("/item/{userId}")
-    public String deleteItems(@PathVariable Integer userId){
+    @DeleteMapping("/item/userId/{userId}")
+    public String deleteItemsByUserId(@PathVariable Integer userId){
         List <UserProduct> items = userProductRepository.findByUserId(userId);
         List<String> idErased = new ArrayList<>();
         for (UserProduct myProducts: items) {
@@ -93,6 +93,15 @@ public class UserProductController {
                 userProductRepository.deleteById(myProducts.getId());
             }
         return ("Products id Erased: " + idErased.toString());
+    }
+
+    @DeleteMapping("/item/productId/{productId}")
+    public String deleteItemsByProductId(@PathVariable Integer productId){
+        List <UserProduct> items = userProductRepository.findByproductId(productId);
+        for (UserProduct myProduct: items) {
+            userProductRepository.deleteById(myProduct.getId());
+        }
+        return ("Products id Erased: " + productId);
     }
 
     @DeleteMapping("/item/{userId}/{productId}")

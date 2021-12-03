@@ -6,9 +6,9 @@
 
 #### Resumen
 | Servicio | funcionalidad| funcionalidad | funcionalidad | funcionalidad |
-| --------- | --------- | --------- | --------- | --------- |
+| ----------- | ----------- | ----------- | ----------- | ----------- |
 | CRUD Products| Create| Get <br/> getAll <br/> getByIsService| Update| Delete|
-| CRUD userProducts| Create| GetbyUserId <br/> getbyUser&Product| Update| DeletebyUserId <br/> Delete byUser&Product|
+| CRUD userProducts| Create| GetbyUserId <br/> getbyUser&Product| Update| DeletebyUserId <br/> DeleteByProductId <br/> Delete byUser&Product|
 
 
 ## CRUD Products
@@ -213,7 +213,17 @@ Ejemplo respuesta OK JSON:
 ### Delete by UserId
 Link del servicio
 ```bash
-https://mintic2022-p5-g4-dw-be-auth.herokuapp.com/item/1
+https://mintic2022-p5-g4-dw-be-auth.herokuapp.com/item/userId/1
+```
+Respuesta ok:
+```bash
+string
+```
+
+### Delete by ProductId
+Link del servicio
+```bash
+https://mintic2022-p5-g4-dw-be-auth.herokuapp.com/item/productId/1
 ```
 Respuesta ok:
 ```bash
