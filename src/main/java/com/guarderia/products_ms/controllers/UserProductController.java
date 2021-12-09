@@ -54,8 +54,7 @@ public class UserProductController {
         if (userPrdctsFiltered == null)
             throw new ProductNotFoundException("The product or user was not found");
 
-        Integer actualValue = userProduct.getQuantity();
-        userProduct.setQuantity(actualValue + userPrdctsFiltered.getQuantity());
+        userProduct.setQuantity(userPrdctsFiltered.getQuantity());
 
         if (userProduct.getQuantity() <= 0)
             userProduct.setQuantity(1);
