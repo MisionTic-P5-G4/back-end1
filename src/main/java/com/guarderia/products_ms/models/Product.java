@@ -12,12 +12,14 @@ public class Product {
     private String name;
     private Integer price;
     private Boolean isService;
+    private String imgSrc;
 
-    public Product(Integer id, String name, Integer price, Boolean isService ){
+    public Product(Integer id, String name, Integer price, Boolean isService, String imgSrc){
         this.id = id;
         this.name = name;
         this.price = price;
         this.isService = isService;
+        this.imgSrc = imgSrc;
     }
 
     public Integer getId() {
@@ -44,11 +46,19 @@ public class Product {
         this.price = price;
     }
 
-    public Boolean getIsService() {
+    public Boolean getService() {
         return isService;
     }
 
-    public void setIsService(Boolean isService) {
-        this.isService = isService;
+    public void setService(Boolean service) {
+        isService = service;
+    }
+
+    public String getImgSrc() {
+        return imgSrc;
+    }
+
+    public void setImgSrc(String imgSrc) {
+        this.imgSrc = imgSrc;
     }
 }
