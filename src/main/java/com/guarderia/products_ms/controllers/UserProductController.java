@@ -54,13 +54,13 @@ public class UserProductController {
         if (userPrdctsFiltered == null)
             throw new ProductNotFoundException("The product or user was not found");
 
-        userProduct.setQuantity(userPrdctsFiltered.getQuantity());
+        userPrdctsFiltered.setQuantity(userProduct.getQuantity());
 
-        if (userProduct.getQuantity() <= 0)
-            userProduct.setQuantity(1);
+        if (userPrdctsFiltered.getQuantity() <= 0)
+            userPrdctsFiltered.setQuantity(1);
 
-        userProduct.setId(userPrdctsFiltered.getId());
-        return userProductRepository.save(userProduct);
+        userPrdctsFiltered.setId(userPrdctsFiltered.getId());
+        return userProductRepository.save(userPrdctsFiltered);
     }
 
     @GetMapping("/items/{id}")
