@@ -1,6 +1,6 @@
 # [Guardería - BE-Products-CRUD](https://mintic-p5-g4-dw-be-projects.herokuapp.com/swagger-ui/)
 
-**BE-Products-CRUD** Microservicio para realizar las operaciones de create, modify, get, getAll a la base de datos no relacional ProductsDB.
+**BE-Products-CRUD** Microservicio para realizar las operaciones de create, modify, get, getAll a la base de datos no relacional ProductsDB. Añadida también base de datos UserPoducts donde se registra el id del usuario y el id de un producto, sobre esta nueva base de datos, también se añadio CRUD teniendo metodos para eliminar pos usuario, por producto, por usuario y producto juntos.
 
 **Vista de documentación con swagger en [https://mintic-p5-g4-dw-be-projects.herokuapp.com/swagger-ui/](https://mintic-p5-g4-dw-be-projects.herokuapp.com/swagger-ui/)**
 
@@ -25,7 +25,8 @@ Ejemplo entrada body JSON:
 {
   "name": "string",
   "price": 0.
-  "isService": true
+  "service": true
+  "imgSrc": "string"
 }
 ```
 Ejemplo respuesta OK JSON:
@@ -33,8 +34,9 @@ Ejemplo respuesta OK JSON:
 {
   "id": 0,
   "name": "string",
-  "price": 0.
-  "isService": true
+  "price": 0,
+  "service": true,
+  "imgSrc": "string"
 }
 ```
 
@@ -63,9 +65,10 @@ Ejemplo respuesta OK JSON:
 [
   {
     "id": 0,
-    "isService": true,
+    "service": true,
     "name": "string",
-    "price": 0
+    "price": 0,
+    "imgSrc": "string"
   }
 ]
 ```
@@ -83,7 +86,8 @@ Ejemplo respuesta JSON:
     "id": 0,
     "isService": true,
     "name": "string",
-    "price": 0
+    "price": 0,
+    "imgSrc": "string"
   }
 ]
 ```
@@ -98,7 +102,8 @@ Ejemplo entrada body JSON:
 {
   "isService": true,
   "name": "string",
-  "price": 0
+  "price": 0,
+  "imgSrc": "string"
 }
 ```
 Ejemplo respuesta OK JSON:
@@ -107,7 +112,8 @@ Ejemplo respuesta OK JSON:
   "id": 0,
   "isService": true,
   "name": "string",
-  "price": 0
+  "price": 0,
+  "imgSrc": "string"
 }
 ```
 
